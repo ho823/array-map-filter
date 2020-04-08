@@ -42,8 +42,19 @@ Expected OUTPUT for this sample
 
 */
 
-function getFoodCategories(foods) {
-}
+function getFoodCategories(nameFood) {
+  return nameFood.map( listFood => {
+      if(listFood.isVegetarian){
+    return `${listFood.food} is suitable for vegetarians`;
+  } else {
+    return `${listFood.food} is not suitable for vegetarians`;
+  }
+  });
+  
+}               
+
+console.log(getFoodCategories([{food: 'Bacon',isVegetarian: false}, {food: 'Sausage', isVegetarian: false}, {food: 'Tofu', isVegetarian: true}, {food: 'Chick Pea', isVegetarian: true}]))
+  
 
 
 
