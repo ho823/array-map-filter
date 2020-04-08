@@ -62,7 +62,22 @@ Expected OUTPUT for this sample:
  */
 
 function getMoviesFreshness(movies) {
+  movies.map(listmovie =>{
+          if (listmovie.rating >= 60 && listmovie.rating <= 75) {
+              listmovie.label = "fresh";
+          } else if (listmovie.rating > 75) {
+              listmovie.label = "certified fresh";
+          } else {
+              listmovie.label = "rotten";
+          }
+      }
+  );
+  return movies;
 }
+
+console.log(getMoviesFreshness([{name: 'Crazy Rich Asians', rating: 93}, {name: 'Skyscraper', rating: 46}, {name: 'Leave No Trace', rating: 100}, {name: 'White Boy Rick', rating: 60}]));
+
+
 
 
 
