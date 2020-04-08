@@ -25,8 +25,11 @@ Expected OUTPUT for this sample:
 
 */
 
-function keepStarks(names) {
+function keepStarks(name) {
+  return name.filter((names) => names.endsWith('Stark'));
 }
+console.log(keepStarks(['Bran Stark', 'Cersei Lannister', 'Sandor Clegane', 'Arya Stark',
+    'Yara Greyjoy', 'Sansa Stark']));
 
 // DON'T TOUCH THIS!
 module.exports = keepStarks;
